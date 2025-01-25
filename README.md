@@ -20,7 +20,7 @@ This repo is basically: here's what I learned about IAM after years of fighting 
 4. Build policies that give services what they need and nothing more (harder than it sounds)
 5. Translate "we need to deploy things quickly" into "here's how to do that securely"
 
-## 📚 Contents
+## Contents
 
 ### Core IAM Concepts
 - [`01-iam-fundamentals/`](./01-iam-fundamentals/) - IAM building blocks and security implications
@@ -100,7 +100,7 @@ This repo is basically: here's what I learned about IAM after years of fighting 
 
 **Security Benefit**: Prevents unauthorized cross-account or cross-service access
 
-## 🔑 Key IAM Patterns Documented
+## Key IAM Patterns Documented
 
 ### Pattern 1: Hub-and-Spoke IAM Federation
 Centralized identity provider federating to multiple AWS accounts.
@@ -216,41 +216,41 @@ python3 generate-policy.py --cloudtrail-logs logs/ --role-name MyAppRole
 
 **Output**: Least privilege policy JSON, comparison with current policy
 
-## 📊 IAM Maturity Model
+## IAM Maturity Model
 
 ### Level 1: Basic (Ad-hoc IAM)
-- ❌ Shared credentials and root account usage
-- ❌ Overly broad policies (`*` permissions)
-- ❌ No MFA enforcement
-- ❌ Manual access management
+- Shared credentials and root account usage
+- Overly broad policies (`*` permissions)
+- No MFA enforcement
+- Manual access management
 
 ### Level 2: Managed (Structured IAM)
-- ✅ Individual user accounts with MFA
-- ✅ Role-based access control (RBAC)
-- ✅ Some policy restrictions
-- ⚠️ Still using long-lived credentials for services
+- Individual user accounts with MFA
+- Role-based access control (RBAC)
+- Some policy restrictions
+- Still using long-lived credentials for services
 
 ### Level 3: Defined (Secure IAM)
-- ✅ Federated identity (SSO)
-- ✅ Service roles instead of access keys
-- ✅ Permission boundaries in use
-- ✅ Regular access reviews
-- ⚠️ Limited automation and monitoring
+- Federated identity (SSO)
+- Service roles instead of access keys
+- Permission boundaries in use
+- Regular access reviews
+- Limited automation and monitoring
 
 ### Level 4: Optimized (Security-First IAM)
-- ✅ Least privilege enforced automatically
-- ✅ Short-lived credentials everywhere
-- ✅ Comprehensive CloudTrail monitoring
-- ✅ Automated anomaly detection
-- ✅ Policy-as-code with CI/CD validation
-- ⚠️ May still have some manual processes
+- Least privilege enforced automatically
+- Short-lived credentials everywhere
+- Comprehensive CloudTrail monitoring
+- Automated anomaly detection
+- Policy-as-code with CI/CD validation
+- May still have some manual processes
 
 ### Level 5: Adaptive (Zero Trust IAM)
-- ✅ Continuous authentication and authorization
-- ✅ Context-aware access decisions
-- ✅ Automated response to threats
-- ✅ Real-time least privilege adjustment
-- ✅ Full visibility and automated compliance
+- Continuous authentication and authorization
+- Context-aware access decisions
+- Automated response to threats
+- Real-time least privilege adjustment
+- Full visibility and automated compliance
 
 **Current Focus**: Helping teams move from Level 2-3 to Level 4-5
 
@@ -290,7 +290,7 @@ This is security research and documentation. Everything here is:
 
 Don't just copy-paste IAM policies without understanding what they do. That's how you either lock yourself out or give everyone too much access (both bad).
 
-## 🚀 Future Additions
+## Future Additions
 
 - [ ] Azure AD and GCP IAM comparison
 - [ ] Kubernetes RBAC integration with cloud IAM
